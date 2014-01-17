@@ -1,0 +1,4 @@
+zz_quotes_quotes:
+    type: rest
+    resource: ZZ\Bundle\QuotesBundle\Controller\QuotesController
+    prefix: api

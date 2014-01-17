@@ -1,0 +1,11 @@
+parameters:
+#    zz_quotes.example.class: ZZ\Bundle\QuotesBundle\Example
+
+services:
+    wsse.security.authentication.provider:
+        class:  ZZ\Bundle\QuotesBundle\Security\Authentication\Provider\WsseProvider
+        arguments: ['', '', '']
+
+    wsse.security.authentication.listener:
+        class:  ZZ\Bundle\QuotesBundle\Security\Firewall\WsseListener
+        arguments: [@security.context, @security.authentication.manager]
